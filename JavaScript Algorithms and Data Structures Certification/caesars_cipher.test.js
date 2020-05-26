@@ -9,8 +9,18 @@ test("Single character string, without looping.", () => {
     expect(rot13("B")).toBe("O");
 });
 
-// looping, single char
+test("Single character with looping, i.e. Z -> M", () => {
+    expect(rot13("Z")).toBe("M");
+    expect(rot13("P")).toBe("C");
+})
 
-// longer words with possible looping
+test("Longer words with looping", () => {
+    expect(rot13("SERRPBQRPNZC")).toBe("FREECODECAMP");
+})
 
-// Do not transform any non alphabetical char
+test("Do not transform any non alphabetical char", () => {
+    expect(rot13("SERR CVMMN!")).toBe("FREE PIZZA!");
+    expect(rot13("SERR YBIR?")).toBe("FREE LOVE?");
+    expect(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT."))
+        .toBe("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.");
+})
