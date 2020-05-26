@@ -4,7 +4,7 @@
   "description": "This project contains the source code for my solutions to the projects for my freeCodeCamp.org certifications.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
